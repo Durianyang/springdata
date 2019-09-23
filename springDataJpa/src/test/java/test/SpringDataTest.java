@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 import xyz.durianyang.entity.Customer;
 import xyz.durianyang.service.CustomerService;
 
@@ -69,5 +70,37 @@ public class SpringDataTest
         {
             System.err.println(customer);
         }
+    }
+
+    /**
+     * 统计总记录数
+     */
+    @Test
+    public void testCount()
+    {
+        long count = customerService.getCount();
+        System.out.println(count);
+    }
+
+    /**
+     * 判断某个id的记录是否存在
+     */
+    @Test
+    public void testExists()
+    {
+        boolean flag = customerService.exists(4L);
+        System.out.println(flag);
+    }
+
+    /**
+     * 实际使用了getReference，延迟加载
+     * getOne()需要@Transactional支持
+     */
+    @Test
+    @Transactional
+    public void testGetOne()
+    {
+        Customer customer = customerService.getOne(5L);
+        System.out.println(customer);
     }
 }

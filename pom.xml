@@ -10,7 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>jpa01</module>
-    <module>sprinfDataJpa</module>
+    <module>springDataJpa</module>
   </modules>
 
   <properties>
