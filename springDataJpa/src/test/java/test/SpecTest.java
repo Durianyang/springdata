@@ -72,6 +72,9 @@ public class SpecTest
         System.out.println(customer);
     }
 
+    /**
+     * 多条件查询
+     */
     @Test
     public void testSpec2()
     {
@@ -155,7 +158,7 @@ public class SpecTest
     public void testPageable()
     {
         //创建Pageable接口的实现类
-        /**
+        /*
          * 第一个参数：当前页：从0开始
          * 第二个参数：每页记录条数
          */
@@ -172,6 +175,5 @@ public class SpecTest
         System.out.println("getTotalElements:" + Pages.getTotalElements());//总记录数
         System.out.println("getSort:" + Pages.getSort());//
         System.out.println("getNumberOfElements:" + Pages.getNumberOfElements());//当前页记录数
-
     }
 }

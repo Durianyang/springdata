@@ -11,6 +11,7 @@
   <modules>
     <module>jpa01</module>
     <module>springDataJpa</module>
+    <module>SpringDataJpa2</module>
   </modules>
 
   <properties>
