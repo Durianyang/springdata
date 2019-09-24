@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import xyz.durianyang.entity.Customer;
 import xyz.durianyang.service.CustomerService;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -47,26 +46,23 @@ public class JpqlTest
         customerService.updateNameById(5L, "王二");
     }
 
-    /**
-     * 每个Object[]对象存储一条记录的数据
-     */
     @Test
     public void testFindBySql()
     {
-        List<Object[]> customerArray = customerService.findBySql();
-        for (Object[] objects : customerArray)
+        List<Customer> customerArray = customerService.findBySql();
+        for (Customer customer : customerArray)
         {
-            System.out.println(Arrays.toString(objects));
+            System.out.println(customer);
         }
     }
 
     @Test
     public void findBySqlName()
     {
-        List<Object[]> customerArray = customerService.findBySqlName("%王%");
-        for (Object[] objects : customerArray)
+        List<Customer> customerArray = customerService.findBySqlName("%王%");
+        for (Customer customer : customerArray)
         {
-            System.out.println(Arrays.toString(objects));
+            System.out.println(customer);
         }
     }
 

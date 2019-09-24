@@ -32,9 +32,9 @@ public interface CustomerService
 
     void updateNameById(Long id, String name);
 
-    List<Object[]> findBySql();
+    List<Customer> findBySql();
 
-    List<Object[]> findBySqlName(String name);
+    List<Customer> findBySqlName(String name);
 
     Customer findByCustName(String name);
 

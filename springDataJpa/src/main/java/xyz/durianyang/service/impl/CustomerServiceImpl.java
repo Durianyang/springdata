@@ -79,12 +79,12 @@ public class CustomerServiceImpl implements CustomerService
         customerDao.updateNameById(id, name);
     }
 
-    public List<Object[]> findBySql()
+    public List<Customer> findBySql()
     {
         return customerDao.findBySql();
     }
 
-    public List<Object[]> findBySqlName(String name)
+    public List<Customer> findBySqlName(String name)
     {
         return customerDao.findBySqlName(name);
     }

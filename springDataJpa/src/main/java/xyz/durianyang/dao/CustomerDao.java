@@ -39,16 +39,16 @@ public interface CustomerDao extends JpaRepository<Customer, Long>, JpaSpecifica
     void updateNameById(Long id, String name);
 
     /**
-     * ==============================================使用sql操作
+     * =============================使用sql操作
      */
     @Query(value = "select * from cst_customer", nativeQuery = true)
-    List<Object[]> findBySql();
+    List<Customer> findBySql();
 
     @Query(value = "select * from cst_customer where cust_name like ?1", nativeQuery = true)
-    List<Object[]> findBySqlName(String name);
+    List<Customer> findBySqlName(String name);
 
     /**
-     * ==============================================使用方法命名规则查询
+     * =============================使用方法命名规则查询
      */
     Customer findByCustName(String name);
 

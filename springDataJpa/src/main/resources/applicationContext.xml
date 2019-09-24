@@ -72,7 +72,7 @@
   <!--对此包下的接口动态代理进行增强-->
   <jpa:repositories base-package="xyz.durianyang.dao"
                     transaction-manager-ref="transactionManager"
-                    entity-manager-factory-ref="entityManagerFactory"/>
+                    entity-manager-factory-ref="entityManagerFactory" />
   <!--声明式事务管理-->
   <!-- 4.txAdvice-->
   <tx:advice id="txAdvice">
