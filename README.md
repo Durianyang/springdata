@@ -2,4 +2,4 @@
 SpringDataJpa学习
 
 第一个Module是对JPA规范的简单练习
-第二个Module时SpringDataJPA的入门案例
+第二个Module是SpringDataJPA的入门案例,包含简单的CURD和HQL查询，SQL查询，方法名称查询
